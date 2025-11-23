@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-title',
+  selector: "app-title",
   imports: [],
-  templateUrl: './title.html',
-  styleUrl: './title.scss',
+  templateUrl: "./title.html",
+  styleUrl: "./title.scss",
 })
 export class Title {
-
+  title: string = "Hi, I'm ";
+  boldtitle: string = "sxlphuric";
 }
