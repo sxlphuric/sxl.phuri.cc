@@ -32,6 +32,7 @@ cd sxl.phuri.cc
 
 # Run a development server
 ng serve
+```
 ## TODO
 * Mobile support
 * Find the 3rd link
