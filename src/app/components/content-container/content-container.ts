@@ -4,10 +4,11 @@ import { TitleLower } from '../markdown/title-lower/title-lower';
 import { LinkButtons } from '../link-buttons/link-buttons';
 import { TableData } from '../../classes/table-data';
 import { DataTable } from '../data-table/data-table';
+import { Quote } from '../markdown/quote/quote';
 
 @Component({
   selector: 'app-content-container',
-  imports: [MarkdownTitle,TitleLower,LinkButtons,DataTable],
+  imports: [MarkdownTitle,TitleLower,LinkButtons,DataTable, Quote],
   templateUrl: './content-container.html',
   styleUrl: './content-container.scss',
 })
@@ -17,4 +18,8 @@ export class ContentContainer {
       {header: "passion",data:"cooking"},
       {header: "from",data:"canada"},
     ];
+
+  websiteUpdateData: TableData[] = [
+    {header: "2.0.0", data: "new website style!"}
+  ]
 }
