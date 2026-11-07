@@ -1,0 +1,19 @@
+.md-title-lower {
+  width: 100%;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, #d9e1eb 100%);
+  border-radius: 0.3rem;
+  border: 1px dotted #868c97;
+  font-size: 1rem;
+  font-weight: 700;
+  display:flex;
+  align-items:center;
+  height: 1.5rem;
+  color: #505d70;
+  overflow: hidden;
+  gap: 0.3rem;
+  .deco-bar {
+    background-color: #334760;
+    height: 100%;
+    width: 8px;
+  }
+}

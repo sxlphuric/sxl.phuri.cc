@@ -8,29 +8,31 @@ import { Component, signal, effect, computed } from "@angular/core";
 })
 export class Title {
   clicks = signal(0);
-  threshold = 25;
+  baseThreshold = 5;
+  threshold = this.baseThreshold;
+  currentString = "hi, i'm";
+
+  strings = [
+    "my real name is not",
+    "website by",
+    "i am",
+    "it's who?",
+    "welcome to my page!",
+  ];
 
   // Basically use an effect and if the clicks are higher than 20 then return the easter egg text
   title = computed(() => {
-    if (this.clicks() >= 40) {
-      return "No, there's no more ";
-    } else if (this.clicks() >= 25) {
-      return "Congrats, you found the ";
+    if (this.clicks() >= this.threshold) {
+      this.threshold += this.baseThreshold;
+      this.currentString = this.strings[Math.floor(Math.random() * this.strings.length)];
+      return this.currentString;
     } else {
-      return "Hi, I'm ";
-    }
-  });
-  boldtitle = computed(() => {
-    if (this.clicks() >= 40) {
-      return "gimmicks";
-    } else if (this.clicks() >= 25) {
-      return "secret";
-    } else {
-      return "sxlphuric";
+      return this.currentString;
     }
   });
 
   addCounter() {
     this.clicks.update((value) => value + 1);
+
   }
 }

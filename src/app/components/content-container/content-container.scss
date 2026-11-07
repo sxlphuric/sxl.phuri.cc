@@ -1,0 +1,91 @@
+.main-container {
+  padding:0px;
+  width: 70%
+}
+
+.banner {
+  padding:0px;
+  margin:0px;
+  border-bottom: 2px dotted #334760;
+  height:166px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    margin:0px;
+  }
+}
+
+.content {
+  display: flex;
+  div {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    .background {
+      background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, #e3eaef 70%);
+    }
+    gap: 0.5rem;
+    div {
+      margin: 0px;
+      gap: 0.5rem;
+      color: #788e9e;
+    }
+  }
+
+  .content-left {
+    border-right: 2px dotted #aca7a4;
+    flex: 3;
+  }
+  .content-right {
+    flex: 1;
+  }
+}
+
+.box {
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+  border: 2px dotted #748394;
+  background-color: #788e9e09
+}
+
+ul.decorative-list {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 8px;
+  list-style-type: none;
+  list-style-position: outside;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  li {
+    display: flex;
+    min-height: 24px;
+    padding: 0px;
+    color: #748394;
+    width: calc(100% );
+    text-indent: 0;
+    align-items: center;
+    &::before {
+      display:block;
+      content: '';
+      flex: 0 0 20px;
+      width: 20px;
+      height: 20px;
+      background-color: #505d70;
+      -webkit-mask: url("/pixel-heart.png") center / contain;
+      mask: url("/pixel-heart.png") center / contain;
+    }
+    &.list-border-element  {
+    .text {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      border-top: 1px dotted #91979e;
+      border-bottom: 1px dotted #91979e;
+    }
+    }
+  }
+}
