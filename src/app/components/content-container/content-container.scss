@@ -3,17 +3,70 @@
   width: 70%;
 }
 
+.header {
+  border-bottom: 2px dotted #334760;
+  display:flex;
+  flex-direction: column;
 .banner {
+  position: relative;
   padding: 0px;
   margin: 0px;
-  border-bottom: 2px dotted #334760;
-  height: 166px;
+  height: 250px;
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     margin: 0px;
   }
+  &::before {
+    position: absolute;
+    content: "";
+    inset:0;
+    z-index: 1;
+    background: linear-gradient(180deg, #ffffff00 0%, #e3eaef 100%);
+  }
+}
+.nav {
+  display: flex;
+  button {
+    flex: 1;
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+    background: linear-gradient(180deg,#ffffff00 0%, #e3eaef 50%);
+    min-height: 80px;
+    transition: background-color 500ms ease;
+    position: relative;
+    isolation: isolate;
+    border-right: 1px solid #b5c5d8;
+    & > * {
+      position: relative;
+      z-index: 1000;
+    }
+    &.last-element {
+      border-right: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: #e3eaef;
+      opacity: 0;
+      transition: opacity 500ms ease;
+      pointer-events: none;
+    }
+    &.active {
+      border-bottom: 5px solid #334760;
+    }
+    &:hover, &.active {
+      transform:none;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
 }
 
 .content {
