@@ -35,6 +35,14 @@
       gap: 0.5rem;
       color: #788e9e;
     }
+    .row-container {
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      div {
+        flex: 1;
+      }
+    }
   }
 
   .content-left {
