@@ -1,25 +1,32 @@
-# My Personal Webpage
+# My Personal Webpage (2.0-resdesign branch)
 ## Overview
-This is a small page made with Angular and styled with PaperCSS. It links to a blog, and to [my stuff](https://github.com/sxlphuric/mystuff). It has 3 links, which are all hard-coded, and an image loaded from [Picsum](https://picsum.photos). It also has an easter egg.
-<img width="623" height="818" alt="image" src="https://github.com/user-attachments/assets/0cd40a31-d317-40ac-9748-6f05b69152d0" />
+This is a small page made with Angular and styled with PaperCSS. It has a banner with a cool paper feel and a profile card, and a nice visual style.
+<img width="1288" height="1059" alt="1794090251102393413" src="https://github.com/user-attachments/assets/ecc5ee1b-dd1f-4f3a-8ce2-7bd35e59e567" />
 ## Project Structure
 ```
-public - public folder containing stuff like favicon, etc.
+public
+|_ aesthetic-banner.jpg - aesthetic banner for website
+|_ pixel-heart.png - heart icon for lists
+|_ profile.png - github profile picture
 |_ favicon.ico - favicon
-|_ src - source folder containing all the code
+|_ src
   |_ app
+    |_ classes
+      |_ table-data.ts - data model for a two column table
     |_ components
+      |_ content-container - main content box
+      |_ data-table - two column table component
       |_ footer - an unused footer component
       |_ link-buttons - component where the link buttons are hard-coded
-      |_ main - main content (image and description)
+      |_ main - wrapper
       |_ nav - an unused navigation bar component
       |_ title - title component with an easter egg
+      |_ markdown
+        |_ quote - markdown quote component
+        |_ title-lower - subtitle component for widgets
+        |_ title - title component for widgets
     |_ app.html - html content of the page, containing all components
-    |_ app.scss - styles of the page
-    |_ app.ts - title signaler
-  |_ index.html - page html file, containing the angular app component
-  |_ main.ts - page angular bootstrapper
-  |_ styles.scss - global styles with papercss import
+  |_ styles.scss - global styles with papercss import and fonts
 ```
 ## Contributing
 I'm assuming you already have the Angular toolchain installed. If not, please [install it](https://angular.dev/installation).
@@ -34,9 +41,5 @@ cd sxl.phuri.cc
 ng serve
 ```
 ## TODO
-* Mobile support
-* Find the 3rd link
-## Roadmap
-- [ ] Mobile website
-- [ ] Working 3rd link
-- [ ] Add another easter egg
+* add content to boxes
+* move links elsewhere
