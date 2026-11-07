@@ -10,10 +10,12 @@
   height: 1.5rem;
   color: #505d70;
   overflow: hidden;
-  gap: 0.3rem;
-  .deco-bar {
-    background-color: #334760;
-    height: 100%;
-    width: 8px;
-  }
+  &::before {
+      display: block;
+      content: "";
+      background-color: #334760;
+      height: 100%;
+      width: 8px;
+      margin-right: 0.3rem;
+    }
 }
