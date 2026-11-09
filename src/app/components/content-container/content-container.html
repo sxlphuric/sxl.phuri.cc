@@ -8,16 +8,16 @@
     />
   </div>
   <div class="nav">
-    <button class="active redaction-50-regular" #home (click)="updateCurrentTab(home)">home</button>
-    <button class="redaction-50-regular" #projects (click)="updateCurrentTab(projects)">projects</button>
-    <button class="redaction-50-regular" #stuff (click)="updateCurrentTab(stuff)">stuff</button>
-    <button class="last-element redaction-50-regular" #gallery (click)="updateCurrentTab(gallery)">gallery</button>
+    <button [class.active]="currentTab() === home.innerHTML" class="redaction-50-regular" #home (click)="currentTab.set(home.innerHTML)">home</button>
+    <button [class.active]="currentTab() === projects.innerHTML" class="redaction-50-regular" #projects (click)="currentTab.set(projects.innerHTML)">projects</button>
+    <button [class.active]="currentTab() === stuff.innerHTML" class="redaction-50-regular" #stuff (click)="currentTab.set(stuff.innerHTML)">stuff</button>
+    <button [class.active]="currentTab() === gallery.innerHTML" class="last-element redaction-50-regular" #gallery (click)="currentTab.set(gallery.innerHTML)">gallery</button>
     <!--button class="last-element redaction-50-regular">{{currentTab.nativeElement.innerHTML}}</button-->
   </div>
   </div>
   <div class="content row">
     <div class="content-left">
-      @if (currentTab.nativeElement.innerHTML == "home") {
+      @if (currentTab() === "home") {
       <page-home class="page"/>
       }
           </div>
