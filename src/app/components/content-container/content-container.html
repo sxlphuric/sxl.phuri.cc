@@ -17,7 +17,9 @@
   </div>
   <div class="content row">
     <div class="content-left">
+      @if (currentTab.nativeElement.innerHTML == "home") {
       <page-home class="page"/>
+      }
           </div>
     <div class="content-right">
       <!-- reminder: Navbar, Currently (music, weather, discord activity), Cooking images, Buttons -->
