@@ -19,6 +19,16 @@
     <div class="content-left">
       @if (currentTab() === "home") {
       <page-home class="page"/>
+      } @else if (currentTab() === "projects") {
+        <page-projects class="page" />
+      } @else if (currentTab() === "stuff") {
+        <page-stuff class="page" />
+      } @else if (currentTab() === "gallery") {
+        <page-gallery class="page" />
+      } @else {
+        <div class="container-sm redaction-50-regular" style="display: flex; justify-content: center; align-items: center;">
+          Woah, a bug happened. Click on the tabs at the top or refresh.
+        </div>
       }
           </div>
     <div class="content-right">
