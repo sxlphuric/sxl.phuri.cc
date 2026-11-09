@@ -1,0 +1,13 @@
+p {
+  display: flex;
+  margin: 0px;
+  font-size: 0.9em;
+  color: #91979e;
+  &::before {
+    display: block;
+    content: "";
+    background-color: #505d70;
+    width: 4px;
+    margin-right: 4px;
+  }
+}

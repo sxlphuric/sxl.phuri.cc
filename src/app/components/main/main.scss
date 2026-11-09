@@ -2,9 +2,16 @@ p {
   text-align: center;
 }
 
+
 #main {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 16px;
+  justify-content: center;
+}
+
+app-content-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
