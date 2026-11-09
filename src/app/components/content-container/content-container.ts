@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MarkdownTitle } from '../markdown/title/title';
 import { TitleLower } from '../markdown/title-lower/title-lower';
 import { LinkButtons } from '../link-buttons/link-buttons';
@@ -22,4 +22,12 @@ export class ContentContainer {
   websiteUpdateData: TableData[] = [
     {header: "2.0.0", data: "new website style!"}
   ]
+
+  @ViewChild("home") currentTab!: ElementRef<HTMLButtonElement>;
+
+  updateCurrentTab(e: HTMLButtonElement) {
+    this.currentTab.nativeElement.classList.remove("active");
+    e.classList.add("active");
+    this.currentTab = new ElementRef<HTMLButtonElement>(e);
+  };
 }

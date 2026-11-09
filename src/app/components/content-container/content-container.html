@@ -8,11 +8,11 @@
     />
   </div>
   <div class="nav">
-    <button class="active redaction-50-regular">home</button>
-    <button class="redaction-50-regular">projects</button>
-    <button class="redaction-50-regular">stuff</button>
-    <button class="redaction-50-regular"></button>
-    <button class="last-element redaction-50-regular"></button>
+    <button class="active redaction-50-regular" #home (click)="updateCurrentTab(home)">home</button>
+    <button class="redaction-50-regular" #projects (click)="updateCurrentTab(projects)">projects</button>
+    <button class="redaction-50-regular" #stuff (click)="updateCurrentTab(stuff)">stuff</button>
+    <button class="last-element redaction-50-regular" #gallery (click)="updateCurrentTab(gallery)">gallery</button>
+    <!--button class="last-element redaction-50-regular">{{currentTab.nativeElement.innerHTML}}</button-->
   </div>
   </div>
   <div class="content row">
