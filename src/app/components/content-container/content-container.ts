@@ -5,10 +5,16 @@ import { LinkButtons } from '../link-buttons/link-buttons';
 import { TableData } from '../../classes/table-data';
 import { DataTable } from '../data-table/data-table';
 import { Quote } from '../markdown/quote/quote';
+import { HomePage } from '../pages/home-page/home-page';
+import { ProjectsPage } from '../pages/projects-page/projects-page';
+import { StuffPage } from '../pages/stuff-page/stuff-page';
+import { GalleryPage } from '../pages/gallery-page/gallery-page';
 
 @Component({
   selector: 'app-content-container',
-  imports: [MarkdownTitle,TitleLower,LinkButtons,DataTable, Quote],
+  imports: [MarkdownTitle, TitleLower, LinkButtons,
+    DataTable, Quote, HomePage,
+    ProjectsPage, StuffPage, GalleryPage],
   templateUrl: './content-container.html',
   styleUrl: './content-container.scss',
 })

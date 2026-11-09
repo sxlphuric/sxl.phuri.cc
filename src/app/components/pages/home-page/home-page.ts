@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { MarkdownTitle } from '../../markdown/title/title';
+import { LinkButtons } from '../../link-buttons/link-buttons';
 
 @Component({
-  selector: 'app-home-page',
-  imports: [],
+  selector: 'page-home',
+  imports: [MarkdownTitle,LinkButtons],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss',
 })
