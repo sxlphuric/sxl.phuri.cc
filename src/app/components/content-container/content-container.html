@@ -8,10 +8,10 @@
     />
   </div>
   <div class="nav">
-    <button [class.active]="currentTab() === home.innerHTML" class="redaction-50-regular" #home (click)="currentTab.set(home.innerHTML)">home</button>
-    <button [class.active]="currentTab() === projects.innerHTML" class="redaction-50-regular" #projects (click)="currentTab.set(projects.innerHTML)">projects</button>
-    <button [class.active]="currentTab() === stuff.innerHTML" class="redaction-50-regular" #stuff (click)="currentTab.set(stuff.innerHTML)">stuff</button>
-    <button [class.active]="currentTab() === gallery.innerHTML" class="last-element redaction-50-regular" #gallery (click)="currentTab.set(gallery.innerHTML)">gallery</button>
+    <button [class.active]="currentTab() === 'home'" class="redaction-50-regular" (click)="currentTab.set('home')">home</button>
+    <button [class.active]="currentTab() === 'projects'" class="redaction-50-regular" (click)="currentTab.set('projects')">projects</button>
+    <button [class.active]="currentTab() === 'stuff'" class="redaction-50-regular" (click)="currentTab.set('stuff')">stuff</button>
+    <button [class.active]="currentTab() === 'gallery'" class="last-element redaction-50-regular" (click)="currentTab.set('gallery')">gallery</button>
     <!--button class="last-element redaction-50-regular">{{currentTab.nativeElement.innerHTML}}</button-->
   </div>
   </div>
